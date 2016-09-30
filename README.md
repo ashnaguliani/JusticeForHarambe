@@ -34,3 +34,12 @@ Risk Mitigation Plan
 - Utilize Unity’s extensive libraries and online support to augment our C# coding skills
 - If we find ourselves receiving backlash from any groups, we will listen to their complaints, and find middle ground with them, without releasing our ideology or vision for the game.
 - Utilize time management tools
+
+Version Control:  
+GitHub
+
+Software Development Methodology: 
+Agile
+
+Collaboration Tool: 
+Slack
