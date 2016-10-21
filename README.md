@@ -3,11 +3,11 @@
 Team Name: 20/20 Entertainment
 
 Members:
-Souneth Ly,
-Cory Cranford,
-Andres Salinas,
-Ashna Guliani,
-Keegan Sotebeer,
+Souneth Ly
+Cory Cranford
+Andres Salinas
+Ashna Guliani
+Keegan Sotebeer
 Ross Blassingame
 
 Description:
