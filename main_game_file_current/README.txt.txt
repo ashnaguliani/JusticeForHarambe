@@ -1,0 +1,1 @@
+This is for the main current working game file. Delete the current files in this folder before committing a full new game file after an update.
