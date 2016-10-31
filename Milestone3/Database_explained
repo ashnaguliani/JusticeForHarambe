@@ -1,0 +1,6 @@
+We will be using a SQL database through phpmyadmin to create a global leaderboard database that shows players of the app the top 50 runs
+globally, based on three different stats from the game. Our tables will be named distance_board which displays the top 50 scores of all
+time based on the distance ran in the game. The second table is named banana_board which displays the top 50 scores of all time based on
+bananas collected in a run. The third table is named score_board which displays the top 50 scores of all time based on the overall score
+received from a run, which is calculated by bananas, distance, special items within the games, etc. We will be displaying the top 50
+scores in each table, so with each table containing 50 rows of data, that means we should keep track of 150 specific rows of data.
