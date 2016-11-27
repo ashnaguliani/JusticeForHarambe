@@ -1,98 +1,97 @@
 ﻿using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 
 public class GeneratorScript : MonoBehaviour {
-    public GameObject[] availableRooms;
-    public List<GameObject> currentRooms;
-    private float screenWidthInPoints;
+	public GameObject[] availableRooms;
+	public List<GameObject> currentRooms;
+	private float screenWidthInPoints;
 
 	// Use this for initialization
 	void Start () {
-        float height = 2.0f * Camera.main.orthographicSize;
-        screenWidthInPoints = height * Camera.main.aspect;
+		float height = 2.0f * Camera.main.orthographicSize;
+		screenWidthInPoints = height * Camera.main.aspect;
 	}
 	
-    void FixedUpdate()
-    {
-        GenerateRoomIfRequired();
-    }
-
 	// Update is called once per frame
 	void Update () {
 	
 	}
-    
-    // AddRoom is called to add a new prefab room from availableRooms array
-    void AddRoom(float farthestRoomEndX)
-    {
-        //1
-        int randomRoomIndex = Random.Range(0, availableRooms.Length);
 
-        //2
-        GameObject room = (GameObject)Instantiate(availableRooms[randomRoomIndex]);
+	void AddRoom(float farhtestRoomEndX)
+	{
+		//1
+		int randomRoomIndex = Random.Range(0, availableRooms.Length);
 
-        //3
-        float roomWidth = room.transform.FindChild("floor").localScale.x;
+		//2
+		GameObject room = (GameObject)Instantiate(availableRooms[randomRoomIndex]);
 
-        //4
-        float roomCenter = farthestRoomEndX + roomWidth * 0.5f;
+		//3
+		float roomWidth = room.transform.FindChild("floor").localScale.x;
 
-        //5
-        room.transform.position = new Vector3(roomCenter, 0, 0);
+		//4
+		float roomCenter = farhtestRoomEndX + roomWidth * 0.5f - 4;
 
-        //6
-        currentRooms.Add(room);
-    }
+		//5
+		room.transform.position = new Vector3(roomCenter, 0, 0);
 
-    //GenerateRoomIfRequired checks if new room is required
-    void GenerateRoomIfRequired()
-    {
-        //1
-        List<GameObject> roomsToRemove = new List<GameObject>();
+		//6
+		currentRooms.Add(room);         
+	}
 
-        //2
-        bool addRooms = true;
+	void GenerateRoomIfRequired()
+	{
+		//1
+		List<GameObject> roomsToRemove = new List<GameObject>();
 
-        //3
-        float playerX = transform.position.x;
+		//2
+		bool addRooms = true;        
 
-        //4
-        float removeRoomX = playerX - screenWidthInPoints;
+		//3
+		float playerX = transform.position.x;
 
-        //5
-        float addRoomX = playerX + screenWidthInPoints;
+		//4
+		float removeRoomX = playerX - screenWidthInPoints;        
 
-        //6
-        float farthestRoomEndX = 0;
+		//5
+		float addRoomX = playerX + screenWidthInPoints;
 
-        foreach(var room in currentRooms)
-        {
-            //7
-            float roomWidth = room.transform.FindChild("floor").localScale.x;
-            float roomStartX = room.transform.position.x - (roomWidth * 0.5f);
-            float roomEndX = roomStartX + roomWidth;
+		//6
+		float farthestRoomEndX = 0;
 
-            //8
-            if (roomStartX > addRoomX)
-                addRooms = false;
+		foreach(var room in currentRooms)
+		{
+			//7
+			float roomWidth = room.transform.FindChild("floor").localScale.x;
+			float roomStartX = room.transform.position.x - (roomWidth * 0.5f);    
+			float roomEndX = roomStartX + roomWidth;                            
 
-            //9
-            if (roomEndX < removeRoomX)
-                roomsToRemove.Add(room);
+			//8
+			if (roomStartX > addRoomX)
+				addRooms = false;
 
-            //10
-            farthestRoomEndX = Mathf.Max(farthestRoomEndX, roomEndX);
+			//9
+			if (roomEndX < removeRoomX)
+				roomsToRemove.Add(room);
 
-        }
-        //11
-        foreach(var room in roomsToRemove)
-        {
-            currentRooms.Remove(room);
-            Destroy(room);
-        }
-        //12
-        if (addRooms)
-            AddRoom(farthestRoomEndX);
-    }
+			//10
+			farthestRoomEndX = Mathf.Max(farthestRoomEndX, roomEndX);
+		}
 
+		//11
+		foreach(var room in roomsToRemove)
+		{
+			currentRooms.Remove(room);
+			Destroy(room);            
+		}
+
+		//12
+		if (addRooms)
+			AddRoom(farthestRoomEndX);
+	}
+
+	void FixedUpdate () 
+	{    
+		GenerateRoomIfRequired();
+	}
 }

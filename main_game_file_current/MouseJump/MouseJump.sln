@@ -1,7 +1,7 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MouseJump.CSharp", "MouseJump.CSharp.csproj", "{6CB5DC9B-3C25-A8B6-6D6E-FD772A686B57}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{A88F0DD6-ED90-5C2B-4813-CE700506A1D8}") = "MouseJump", "Assembly-CSharp.csproj", "{99877872-5525-5A70-50A6-7E9596740F35}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,12 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6CB5DC9B-3C25-A8B6-6D6E-FD772A686B57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6CB5DC9B-3C25-A8B6-6D6E-FD772A686B57}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6CB5DC9B-3C25-A8B6-6D6E-FD772A686B57}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6CB5DC9B-3C25-A8B6-6D6E-FD772A686B57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99877872-5525-5A70-50A6-7E9596740F35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99877872-5525-5A70-50A6-7E9596740F35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99877872-5525-5A70-50A6-7E9596740F35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99877872-5525-5A70-50A6-7E9596740F35}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
