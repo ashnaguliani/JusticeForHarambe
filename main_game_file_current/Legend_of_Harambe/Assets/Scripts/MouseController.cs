@@ -26,7 +26,7 @@ public class MouseController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//if (dead == false) {
-			timeNow = Time.realtimeSinceStartup;
+			timeNow = Time.timeSinceLevelLoad;
 			timeNow = (timeNow * 100);
 			distanceNow = (int)timeNow;
 		//}
