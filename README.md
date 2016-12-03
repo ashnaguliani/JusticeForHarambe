@@ -1,4 +1,4 @@
-# JusticeForHarambe
+# The Legend of Harambe
 
 Team Name: 20/20 Entertainment
 
