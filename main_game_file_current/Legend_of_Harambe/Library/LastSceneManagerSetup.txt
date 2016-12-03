@@ -1,7 +1,1 @@
-sceneSetups:
-- path: Assets/Scenes/rocketmouse.unity
-  isLoaded: 1
-  isActive: 1
-- path: Assets/Scenes/Customization.unity
-  isLoaded: 1
-  isActive: 0
+sceneSetups: []
