@@ -27,7 +27,7 @@ public class MouseController : MonoBehaviour {
 	void Update () {
 		//if (dead == false) {
 			timeNow = Time.timeSinceLevelLoad;
-			timeNow = (timeNow * 100);
+			timeNow = (timeNow * 2);
 			distanceNow = (int)timeNow;
 		//}
 	}

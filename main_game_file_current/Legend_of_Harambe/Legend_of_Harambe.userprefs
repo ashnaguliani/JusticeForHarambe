@@ -1,12 +1,14 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MouseController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Customization.cs">
     <Files>
-      <File FileName="Assets/Scripts/MouseController.cs" Line="36" Column="37" />
-      <File FileName="Assets/Scripts/GeneratorScript.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/CreatingParticleSortingLayerFix.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/CameraFollow.cs" Line="1" Column="1" />
-      <File FileName="Assets/Animation/harambe_mov.cs" Line="25" Column="22" />
+      <File FileName="Assets\Scripts\MouseController.cs" Line="30" Column="26" />
+      <File FileName="Assets\Scripts\GeneratorScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CreatingParticleSortingLayerFix.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CameraFollow.cs" Line="1" Column="1" />
+      <File FileName="Assets\Animation\harambe_mov.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MenuCtrl.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Customization.cs" Line="2" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
