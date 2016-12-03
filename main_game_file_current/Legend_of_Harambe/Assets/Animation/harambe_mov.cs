@@ -7,6 +7,8 @@ public class harambe_mov : MonoBehaviour {
 
     Animator anim;
 
+	int ID;
+
     public float jumpForce = 700f;
     bool doubleJump = false;
 
@@ -14,9 +16,12 @@ public class harambe_mov : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         anim = GetComponent<Animator>();
+		PlayerPrefs.Save ();
 	}
     void FixedUpdate()
     {
+		ID = PlayerPrefs.GetInt("customID", 1);
+		anim.SetInteger("charID", ID);
         Vector2 newVelocity = GetComponent<Rigidbody2D>().velocity;
         newVelocity.x = forwardMovementSpeed;
         GetComponent<Rigidbody2D>().velocity = newVelocity;
@@ -24,11 +29,10 @@ public class harambe_mov : MonoBehaviour {
         float move = Input.GetAxis("Horizontal");
         anim.SetFloat("Speed", forwardMovementSpeed);
         GetComponent<Rigidbody2D>().velocity = new Vector2(newVelocity.x, GetComponent<Rigidbody2D>().velocity.y);
-
     }
     // Update is called once per frame
     void Update () {
-	
+		anim.SetInteger("charID", ID);
 	}
     
 }
