@@ -1,14 +1,16 @@
 fileFormatVersion: 2
 guid: 4f4d049caba180b498c380877a645ea5
-timeCreated: 1480728910
+timeCreated: 1480886978
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: Harambe_2
     21300002: HARAMBE_1
     21300004: Harambe_1
-    21300006: HARAMBE_2
+    21300006: HARAMBE_1
     21300008: HARAMBE_1
+    21300010: HARAMBE_2
+    21300012: HARAMBE_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -62,7 +64,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 65
-        y: 14
+        y: 302
         width: 344
         height: 356
       alignment: 0
@@ -74,10 +76,23 @@ TextureImporter:
       name: HARAMBE_1
       rect:
         serializedVersion: 2
-        x: 435
-        y: 84
+        x: 427
+        y: 372
         width: 344
         height: 348
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: HARAMBE_3
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 90
+        width: 389
+        height: 434
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -28,6 +28,12 @@ public class Customization : MonoBehaviour {
 		} 
 
 		else if (currentID == 2) {
+			currentID = 3;
+			PlayerPrefs.SetInt("customID", 3);
+			PlayerPrefs.Save();
+		}
+
+		else if (currentID == 3) {
 			currentID = 1;
 			PlayerPrefs.SetInt("customID", 1);
 			PlayerPrefs.Save();
