@@ -6,6 +6,16 @@ public class MouseController : MonoBehaviour {
     public float forwardMovementSpeed = 3.0f;
     private bool dead = false;
     private uint bananas = 0;
+	float timeNow = 0;
+	int distance = 0;
+
+	void Update () {
+		if (dead == false) {
+			timeNow = Time.realtimeSinceStartup;
+			timeNow = (timeNow * 10);
+			distance = (int)timeNow;
+		}
+	}
 
     void CollectBanana(Collider2D bananaCollider)
     {
@@ -47,8 +57,37 @@ public class MouseController : MonoBehaviour {
         //UpdateGroundedStatus();
         //AdjustJetpack(jetpackActive);*/
      }
-	// Update is called once per frame
-	void Update () {
-	
+	void OnGUI()
+	{
+		DisplayBananasCount();
+
+		DisplayDistance ();
+	}
+
+	void DisplayBananasCount()
+	{
+		Rect coinIconRect = new Rect(5, 10, 32, 32);
+		//GUI.DrawTexture(coinIconRect, coinIconTexture);                         
+
+		GUIStyle style = new GUIStyle();
+		style.fontSize = 30;
+		style.fontStyle = FontStyle.Bold;
+		style.normal.textColor = Color.white;
+
+		Rect labelRect = new Rect(coinIconRect.xMax, coinIconRect.y, 60, 32);
+		GUI.Label(labelRect, bananas.ToString() + " bananas", style);
+	}
+
+	void DisplayDistance()
+	{
+		Rect distanceIconRect = new Rect(925, 10, 32, 32);
+
+		GUIStyle style = new GUIStyle();
+		style.fontSize = 30;
+		style.fontStyle = FontStyle.Bold;
+		style.normal.textColor = Color.white;
+
+		Rect labelRect = new Rect(distanceIconRect.xMax, distanceIconRect.y, 60, 32);
+		GUI.Label(labelRect, distance.ToString() + " meters", style);
 	}
 }
