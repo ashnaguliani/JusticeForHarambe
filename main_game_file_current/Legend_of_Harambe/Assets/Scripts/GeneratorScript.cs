@@ -124,8 +124,8 @@ public class GeneratorScript : MonoBehaviour {
 		
 		//3
 		float objectPositionX = lastObjectX + Random.Range(objectsMinDistance, objectsMaxDistance);
-		float randomY = Random.Range(objectsMinY, objectsMaxY);
-		obj.transform.position = new Vector3(objectPositionX,randomY,0); 
+		//float randomY = Random.Range(objectsMinY, objectsMaxY);
+		obj.transform.position = new Vector3(objectPositionX,0,0); 
 		
 		//4
 		float rotation = Random.Range(objectsMinRotation, objectsMaxRotation);
@@ -139,8 +139,8 @@ public class GeneratorScript : MonoBehaviour {
 	{
 		//1
 		float playerX = transform.position.x;        
-		float removeObjectsX = playerX - screenWidthInPoints;
-		float addObjectX = playerX + screenWidthInPoints;
+		float removeObjectsX = playerX - (screenWidthInPoints + 10);
+		float addObjectX = playerX + (screenWidthInPoints + 5);
 		float farthestObjectX = 0;
 		
 		//2
@@ -152,7 +152,7 @@ public class GeneratorScript : MonoBehaviour {
 			float objX = obj.transform.position.x;
 			
 			//4
-			farthestObjectX = Mathf.Max(farthestObjectX, objX);
+			farthestObjectX = Mathf.Max(farthestObjectX, (objX + 2));
 			
 			//5
 			if (objX < removeObjectsX)            
