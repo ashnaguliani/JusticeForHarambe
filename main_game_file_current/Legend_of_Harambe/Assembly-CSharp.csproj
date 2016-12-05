@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\CreatingParticleSortingLayerFix.cs" />
      <Compile Include="Assets\Scripts\Customization.cs" />
      <Compile Include="Assets\Scripts\GeneratorScript.cs" />
+     <Compile Include="Assets\Scripts\LaserScript.cs" />
      <Compile Include="Assets\Scripts\MenuCtrl.cs" />
      <Compile Include="Assets\Scripts\MouseController.cs" />
      <Compile Include="Assets\Scripts\UpdateParameters.cs" />

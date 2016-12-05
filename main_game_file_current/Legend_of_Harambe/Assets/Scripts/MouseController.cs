@@ -2,20 +2,44 @@
 using System.Collections;
 
 public class MouseController : MonoBehaviour {
-    public float jetpackForce = 75.0f;
+    //public float jetpackForce = 75.0f;
     public float forwardMovementSpeed = 3.0f;
     private bool dead = false;
     private uint bananas = 0;
 	float timeNow = 0;
 	int distance = 0;
+    int jumpCount = 2;
+    int ID;
+    Animator anim;
 
-	void Update () {
+    bool grounded = false;
+    public Transform groundCheck;
+    float groundRadius = 0.2f;
+    public LayerMask whatIsground; // to identify what is ground
+
+    public float jumpForce = 420f;   //is now jetpackforce
+    bool doubleJump = false;
+
+
+    void Update () {
 		if (dead == false) {
 			timeNow = Time.realtimeSinceStartup;
 			timeNow = (timeNow * 10);
 			distance = (int)timeNow;
 		}
-	}
+
+        anim.SetInteger("charID", ID);
+        //jumps
+
+        /*if ((grounded || !doubleJump) && Input.GetKeyDown(KeyCode.Space))
+        {
+            anim.SetBool("Ground", false);
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
+            if (!doubleJump && !grounded)
+                doubleJump = true;
+        }*/
+
+    }
 
     void CollectBanana(Collider2D bananaCollider)
     {
@@ -33,26 +57,54 @@ public class MouseController : MonoBehaviour {
     void HitByLaser(Collider2D laserCollider)
     {
         dead = true;
+        anim.SetBool("Dead", true);
     }
 	// Use this for initialization
 	void Start () {
-	
-	}
-	void FixedUpdate()
+
+        anim = GetComponent<Animator>();
+        PlayerPrefs.Save();
+
+    }
+    void FixedUpdate()
     {
-        bool jetpackActive = Input.GetButton("Fire1");
+        ID = PlayerPrefs.GetInt("customID", 1);
+        anim.SetInteger("charID", ID);
 
-        jetpackActive = jetpackActive && !dead;
+        //Vector2 newVelocity = GetComponent<Rigidbody2D>().velocity;
+        grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsground);
+        anim.SetBool("Ground", grounded);
 
-        if (jetpackActive)
+        if (grounded)
+            doubleJump = false;
+
+        anim.SetFloat("verticleSpeed", GetComponent<Rigidbody2D>().velocity.y);
+
+        /*bool AliveHarambe = Input.GetMouseButtonDown(0);
+        if ((grounded || !doubleJump && jumpCount <= 2) && AliveHarambe)
         {
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jetpackForce));
-        }
+            anim.SetBool("Ground", false);
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
+            if (!doubleJump && !grounded)
+                doubleJump = true;
+           }*/
+
         if (!dead)
         {
+            bool AliveHarambe = Input.GetMouseButtonDown(0);
+            if ((grounded || !doubleJump && jumpCount <= 2) && AliveHarambe)
+            {
+                anim.SetBool("Ground", false);
+                GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
+                if (!doubleJump && !grounded)
+                    doubleJump = true;
+            }
             Vector2 newVelocity = GetComponent<Rigidbody2D>().velocity;
             newVelocity.x = forwardMovementSpeed;
             GetComponent<Rigidbody2D>().velocity = newVelocity;
+
+            anim.SetFloat("Speed", forwardMovementSpeed);
+            GetComponent<Rigidbody2D>().velocity = new Vector2(newVelocity.x, GetComponent<Rigidbody2D>().velocity.y);
         }
         //UpdateGroundedStatus();
         //AdjustJetpack(jetpackActive);*/
