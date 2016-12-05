@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class MouseController : MonoBehaviour {
     //public float jetpackForce = 75.0f;
     public float forwardMovementSpeed = 3.0f;
     private bool dead = false;
-    private uint bananas = 0;
+    int bananas = 0;
 	float timeNow = 0;
 	int distance = 0;
     int jumpCount = 2;
@@ -26,6 +27,10 @@ public class MouseController : MonoBehaviour {
 			timeNow = Time.realtimeSinceStartup;
 			timeNow = (timeNow * 10);
 			distance = (int)timeNow;
+		}
+
+		if (dead == true && grounded == true) {
+			StartCoroutine (GameOver (3));
 		}
 
         anim.SetInteger("charID", ID);
@@ -106,6 +111,8 @@ public class MouseController : MonoBehaviour {
             anim.SetFloat("Speed", forwardMovementSpeed);
             GetComponent<Rigidbody2D>().velocity = new Vector2(newVelocity.x, GetComponent<Rigidbody2D>().velocity.y);
         }
+			
+			
         //UpdateGroundedStatus();
         //AdjustJetpack(jetpackActive);*/
      }
@@ -141,5 +148,12 @@ public class MouseController : MonoBehaviour {
 
 		Rect labelRect = new Rect(distanceIconRect.xMax, distanceIconRect.y, 60, 32);
 		GUI.Label(labelRect, distance.ToString() + " meters", style);
+	}
+
+	IEnumerator GameOver(float time){
+		yield return new WaitForSeconds (time);
+		SceneManager.LoadScene ("HarambeDead");
+		PlayerPrefs.SetInt ("Distance", distance);
+		PlayerPrefs.SetInt ("Bananas", bananas);
 	}
 }

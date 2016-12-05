@@ -44,3 +44,26 @@ C:\Users\Souneth Ly\Downloads\Legend_of_Harambe\Temp\bin\Debug\UnityEngine.Analy
 C:\Users\Souneth Ly\Downloads\Legend_of_Harambe\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 C:\Users\Souneth Ly\Downloads\Legend_of_Harambe\obj\Debug\Assembly-CSharp.dll
 C:\Users\Souneth Ly\Downloads\Legend_of_Harambe\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Keegan\Documents\CSCI_3308\LocalHarambe\Legend_of_Harambe\Temp\bin\Debug\Assembly-CSharp.dll
+C:\Users\Keegan\Documents\CSCI_3308\LocalHarambe\Legend_of_Harambe\Temp\bin\Debug\Assembly-CSharp.pdb
+C:\Users\Keegan\Documents\CSCI_3308\LocalHarambe\Legend_of_Harambe\Temp\bin\Debug\UnityEditor.dll
+C:\Users\Keegan\Documents\CSCI_3308\LocalHarambe\Legend_of_Harambe\Temp\bin\Debug\UnityEngine.Analytics.dll
+C:\Users\Keegan\Documents\CSCI_3308\LocalHarambe\Legend_of_Harambe\Temp\bin\Debug\UnityEngine.dll
+C:\Users\Keegan\Documents\CSCI_3308\LocalHarambe\Legend_of_Harambe\Temp\bin\Debug\UnityEngine.Networking.dll
+C:\Users\Keegan\Documents\CSCI_3308\LocalHarambe\Legend_of_Harambe\Temp\bin\Debug\UnityEngine.UI.dll
+C:\Users\Keegan\Documents\CSCI_3308\LocalHarambe\Legend_of_Harambe\Temp\bin\Debug\Mono.Cecil.dll
+C:\Users\Keegan\Documents\CSCI_3308\LocalHarambe\Legend_of_Harambe\Temp\bin\Debug\Unity.SerializationLogic.dll
+C:\Users\Keegan\Documents\CSCI_3308\LocalHarambe\Legend_of_Harambe\Temp\bin\Debug\Unity.DataContract.dll
+C:\Users\Keegan\Documents\CSCI_3308\LocalHarambe\Legend_of_Harambe\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+C:\Users\Keegan\Documents\CSCI_3308\LocalHarambe\Legend_of_Harambe\Temp\bin\Debug\Unity.UNetWeaver.dll
+C:\Users\Keegan\Documents\CSCI_3308\LocalHarambe\Legend_of_Harambe\Temp\bin\Debug\Unity.CecilTools.dll
+C:\Users\Keegan\Documents\CSCI_3308\LocalHarambe\Legend_of_Harambe\Temp\bin\Debug\Mono.Cecil.Pdb.dll
+C:\Users\Keegan\Documents\CSCI_3308\LocalHarambe\Legend_of_Harambe\Temp\bin\Debug\Mono.Cecil.Mdb.dll
+C:\Users\Keegan\Documents\CSCI_3308\LocalHarambe\Legend_of_Harambe\Temp\bin\Debug\UnityEngine.xml
+C:\Users\Keegan\Documents\CSCI_3308\LocalHarambe\Legend_of_Harambe\Temp\bin\Debug\UnityEditor.xml
+C:\Users\Keegan\Documents\CSCI_3308\LocalHarambe\Legend_of_Harambe\Temp\bin\Debug\UnityEngine.UI.xml
+C:\Users\Keegan\Documents\CSCI_3308\LocalHarambe\Legend_of_Harambe\Temp\bin\Debug\UnityEngine.Networking.xml
+C:\Users\Keegan\Documents\CSCI_3308\LocalHarambe\Legend_of_Harambe\Temp\bin\Debug\UnityEngine.Analytics.xml
+C:\Users\Keegan\Documents\CSCI_3308\LocalHarambe\Legend_of_Harambe\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+C:\Users\Keegan\Documents\CSCI_3308\LocalHarambe\Legend_of_Harambe\obj\Debug\Assembly-CSharp.dll
+C:\Users\Keegan\Documents\CSCI_3308\LocalHarambe\Legend_of_Harambe\obj\Debug\Assembly-CSharp.pdb
